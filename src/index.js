@@ -1,7 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { ThemeProvider } from "styled-components";
 import Routes from "./Routes";
-import "./styles/reset.scss";
-import "./styles/common.scss";
+import GlobalStyle from "./Styles/GlobalStyles";
+import theme from "./Styles/theme";
 
-ReactDOM.render(<Routes />, document.getElementById("root"));
+ReactDOM.render(
+  <>
+    <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <Routes />
+    </ThemeProvider>
+  </>,
+  document.getElementById("root")
+);
