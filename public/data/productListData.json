@@ -1,0 +1,92 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "thumbnail": "https://images.unsplash.com/photo-1615037486765-e96acbe87231?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4NXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "likeCount": 132,
+      "like": false,
+      "category": "개발",
+      "userName": "깃깃",
+      "title": "당신도 할 수 있다! 베테랑 개발자의 모든 것 베테랑 개발자의 모든 것",
+      "price": 120000,
+      "gift": true
+    },
+    {
+      "id": 2,
+      "thumbnail": "https://images.unsplash.com/photo-1539278670307-a69d04dc8a75?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8b25saW5lJTIwc2hvcHBpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "likeCount": 9373,
+      "like": true,
+      "category": "개발",
+      "userName": "숙녀임당",
+      "title": "[준비물 무료] 연필 하나만으로 모든 분위기를 담아내요, 둡의 연필 드로잉",
+      "price": 60000,
+      "gift": true
+    },
+    {
+      "id": 3,
+      "thumbnail": "https://images.unsplash.com/photo-1611095780122-d692cee29291?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "likeCount": 3536,
+      "like": false,
+      "category": "개발",
+      "userName": "깃깃",
+      "title": "당신도 할 수 있다! 베테랑 개발자의 모든 것 베테랑 개발자의 모든 것",
+      "price": 170000,
+      "gift": false
+    },
+    {
+      "id": 4,
+      "thumbnail": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "likeCount": 3536,
+      "like": false,
+      "category": "개발",
+      "userName": "깃깃",
+      "title": "당신도 할 수 있다! 베테랑 개발자의 모든 것 베테랑 개발자의 모든 것",
+      "price": 800000,
+      "gift": false
+    },
+    {
+      "id": 5,
+      "thumbnail": "https://images.unsplash.com/photo-1615050989483-6f530354d759?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1M3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "likeCount": 3536,
+      "like": true,
+      "category": "개발",
+      "userName": "깃깃",
+      "title": "당신도 할 수 있다! 베테랑 개발자의 모든 것 베테랑 개발자의 모든 것",
+      "price": 150000,
+      "gift": false
+    },
+    {
+      "id": 6,
+      "thumbnail": "https://images.unsplash.com/photo-1615114814213-a245ffc79e9a?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "likeCount": 3536,
+      "like": false,
+      "category": "개발",
+      "userName": "깃깃",
+      "title": "당신도 할 수 있다! 베테랑 개발자의 모든 것 베테랑 개발자의 모든 것",
+      "price": 10000,
+      "gift": false
+    },
+    {
+      "id": 7,
+      "thumbnail": "https://images.unsplash.com/photo-1615149956009-f9fa32fc75e5?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "likeCount": 3536,
+      "like": false,
+      "category": "개발",
+      "userName": "깃깃",
+      "title": "당신도 할 수 있다! 베테랑 개발자의 모든 것 베테랑 개발자의 모든 것",
+      "price": 10000,
+      "gift": false
+    },
+    {
+      "id": 8,
+      "thumbnail": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "likeCount": 3536,
+      "like": false,
+      "category": "개발",
+      "userName": "깃깃",
+      "title": "당신도 할 수 있다! 베테랑 개발자의 모든 것 베테랑 개발자의 모든 것",
+      "price": 10000,
+      "gift": false
+    }
+  ]
+}

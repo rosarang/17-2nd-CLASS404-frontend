@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "value": "reviewCountOrder",
+    "name": "리뷰 많은 순"
+  },
+  {
+    "id": 2,
+    "value": "latestOrder",
+    "name": "최신순"
+  },
+  {
+    "id": 3,
+    "value": "popularOrder",
+    "name": "인기순"
+  }
+]

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faMoneyBillAlt } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
   faChevronDown,
   faChevronUp,
@@ -23,18 +23,10 @@ function Navigation() {
   });
 
   const handleLogin = () => {
-    fetch("API", {
-      headers: {
-        Authorization: localStorage.getItem("access_token"),
-      },
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.message === "SUCCESS") {
-          setIsLoggedIn(true);
-          setUserName(res.userName);
-        }
-      });
+    if (localStorage.getItem("access_token")) {
+      setIsLoggedIn(true);
+      setUserName(localStorage.getItem("user_name"));
+    }
   };
 
   const handleAccount = () => {
@@ -65,9 +57,6 @@ function Navigation() {
               <Heart onClick={() => history.push("/mypage/like")}>
                 <FontAwesomeIcon icon={faHeart} />
               </Heart>
-              <Coupon onClick={() => history.push("/mypage/coupon")}>
-                <FontAwesomeIcon icon={faMoneyBillAlt} />
-              </Coupon>
               <Account>
                 <Wrapper onClick={handleAccount}>
                   <User />
