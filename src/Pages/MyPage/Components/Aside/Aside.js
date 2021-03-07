@@ -41,7 +41,6 @@ const Blank = styled.div`
 
 const AsideContainer = styled.div`
   width: 264px;
-  border: 1px solid black;
 `;
 
 export default Aside;

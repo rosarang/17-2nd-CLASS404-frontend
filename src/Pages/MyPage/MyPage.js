@@ -1,12 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import Navigation from "../../Components/Navigation/Navigation";
+import User from "../../Components/User/User";
 import Aside from "./Components/Aside/Aside";
 
 function MyPage(props) {
   return (
     <MyPageContainer>
+      <Navigation />
       <MyPageWrapper>
-        <UserInfo></UserInfo>
+        <UserInfo>
+          <Wrapper>
+            <User large />
+            <Wrap>
+              <UserName>이사랑</UserName>
+              <UserEmail>rosarang@gmail.com</UserEmail>
+            </Wrap>
+          </Wrapper>
+        </UserInfo>
         <ContentWrapper>
           <Aside />
           <ProductList>
@@ -24,6 +35,27 @@ function MyPage(props) {
   );
 }
 
+const Wrap = styled.div`
+  margin-left: 10px;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const UserName = styled.span`
+  font-size: 20px;
+  font-weight: 600;
+`;
+
+const UserEmail = styled.p`
+  margin-top: 5px;
+  margin-left: 2px;
+  font-size: 12px;
+  color: ${(props) => props.theme.gray};
+`;
+
 const ContentWrapper = styled.div`
   display: flex;
   position: relative;
@@ -37,9 +69,10 @@ const MyPageWrapper = styled.div`
 `;
 
 const UserInfo = styled.div`
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 200px;
-  border: 1px solid black;
 `;
 
 const ProductList = styled.div`
