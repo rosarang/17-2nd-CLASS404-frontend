@@ -40,7 +40,7 @@ const Blank = styled.div`
 `;
 
 const AsideContainer = styled.div`
-  width: 276px;
+  width: 264px;
   border: 1px solid black;
 `;
 
