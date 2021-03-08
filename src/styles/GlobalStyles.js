@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
+
   *, html, body{
     box-sizing:border-box;
     font-family: "Noto Sans KR", sans-serif;
@@ -9,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
     }
   }
+
   a,
   button {
     cursor: pointer;
@@ -16,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
-  button {
+
+button {
     border: none;
   }
 `;
