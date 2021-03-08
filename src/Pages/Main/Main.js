@@ -7,6 +7,7 @@ import CategoryModal from "../../Components/CategoryModal/CategoryModal";
 import SortingModal from "../../Components/SortingModal/SortingModal";
 import Navigation from "../../Components/Navigation/Navigation";
 import { PRODUCTLIST_DATA, PRODUCTLIST_API } from "../../config";
+import Footer from "../Components/Footer/Footer";
 
 function Main() {
   const history = useHistory();
@@ -137,6 +138,7 @@ function Main() {
         </FilterList>
         <ProductsList products={filterProducts} />
       </MainWrapper>
+      <Footer />
     </MainContainer>
   );
 }
