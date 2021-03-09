@@ -5,8 +5,10 @@ import Main from './Pages/Main/Main';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/Signup/Signup';
 import CreatorApply from './Pages/CreatorApply/CreatorApply';
-import ProductDetail from './Pages/ProductDetail/ProductDetail';
-import VideoPlay from './Pages/VideoPlay/VideoPlay';
+// import ProductDetail from './Pages/ProductDetail/ProductDetail';
+import ReviewUpload from './Pages/ReveiwUpload/ReviewUpload';
+
+// import Search from "./Pages/Search/Search";
 
 class Routes extends Component {
   render() {
@@ -18,8 +20,11 @@ class Routes extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/apply" component={CreatorApply} />
-          <Route exact path="/product" component={ProductDetail} />
-          <Route exact path="/video" component={VideoPlay} />
+          {/* <Route exact path="/product" component={ProductDetail} /> */}
+          {/* <Route exact path="/product:id" component={ProductDetail} /> */}
+          <Route exact path="/reviewupload" component={ReviewUpload} />
+
+          {/* <Route exact path="/search" component={Search} /> */}
         </Switch>
       </Router>
     );
