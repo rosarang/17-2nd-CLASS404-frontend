@@ -1,20 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { MYPAGE_API } from "../../../../config";
 import User from "../../../../Components/User/User";
 
-function UserInfo({ userName, userEmail }) {
+function UserInfo({
+  userName,
+  userEmail,
+  onClick,
+  userProfile,
+  setUserProfile,
+}) {
+  const [isEditorOn, setIsEditorOn] = useState(false);
+  const changeProfile = () => {
+    setIsEditorOn(!isEditorOn);
+  };
+
+  const inputImg = (e) => {
+    const img = e.target.files[0];
+    const formData = new FormData();
+
+    formData.append("fileName", img);
+
+    fetch(`${MYPAGE_API}/image`, {
+      method: "POST",
+      headers: {
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMX0.rWGotxA1Tv7WitBvlPelV89kuEDG5FpGXyvw6VsC77M",
+      },
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((res) => setUserProfile(res.file_url));
+
+    setIsEditorOn(!isEditorOn);
+  };
+
   return (
     <UserInfoContainer>
       <Wrapper>
-        <User large />
-        <Wrap>
-          <UserName>{userName}</UserName>
+        <User large profile={userProfile} onClick={changeProfile} />
+        <Wrap onClick={onClick}>
+          <UserName>{userName} </UserName>
           <UserEmail>{userEmail}</UserEmail>
         </Wrap>
+        {isEditorOn && (
+          <>
+            <input type="file" onChange={inputImg} />
+          </>
+        )}
       </Wrapper>
     </UserInfoContainer>
   );
 }
+
+const Button = styled.button`
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+`;
 
 const UserInfoContainer = styled.div`
   display: flex;
@@ -24,12 +67,13 @@ const UserInfoContainer = styled.div`
 `;
 
 const Wrap = styled.div`
-  margin-left: 10px;
+  margin: 0 40px 0 10px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 const UserName = styled.span`
@@ -38,7 +82,7 @@ const UserName = styled.span`
 `;
 
 const UserEmail = styled.p`
-  margin-top: 5px;
+  margin-top: 8px;
   margin-left: 2px;
   font-size: 12px;
   color: ${(props) => props.theme.gray};

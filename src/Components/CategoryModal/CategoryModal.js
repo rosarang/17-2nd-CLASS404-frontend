@@ -8,9 +8,9 @@ import { CATEGORYLIST_DATA } from "../../config";
 
 function CategoryModal({
   handleCategoryModal,
-  saveCategory,
   checkedCategory,
   setCheckedCategory,
+  saveCategory,
   clearCategory,
 }) {
   const [categoryData, setCategoryData] = useState([]);
@@ -38,7 +38,7 @@ function CategoryModal({
       <ModalContainer>
         <SpaceBetweenWrapper>
           <Title>카테고리 설정</Title>
-          <CloseBtn onClick={handleCategoryModal}>
+          <CloseBtn onClick={() => handleCategoryModal()}>
             <FontAwesomeIcon icon={faTimes} />
           </CloseBtn>
         </SpaceBetweenWrapper>
@@ -55,7 +55,10 @@ function CategoryModal({
         </CheckboxList>
         <ButtonWrapper>
           <Button name="초기화" onClick={() => clearCategory()} />
-          <Button name="저장하기" onClick={() => saveCategory()} />
+          <Button
+            name="저장하기"
+            onClick={() => saveCategory(checkedCategory)}
+          />
         </ButtonWrapper>
       </ModalContainer>
     </ModalDim>
