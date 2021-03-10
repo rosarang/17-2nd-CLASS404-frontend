@@ -1,60 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navigation from "../../Components/Navigation/Navigation";
-import User from "../../Components/User/User";
+import UserInfo from "./Components/UserInfo/UserInfo";
+import Title from "./Components/Title/Title";
 import Aside from "./Components/Aside/Aside";
+import { MYPAGE_API } from "../../config";
 
 function MyPage(props) {
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [productLikeData, setProductLiikeData] = useState([]);
+  const [productBuyData, setProductBuyData] = useState([]);
+  const [productCreateData, setProductCreateData] = useState([]);
+
+  useEffect(() => {
+    getMyPageData();
+  }, []);
+
+  const getMyPageData = () => {
+    fetch(MYPAGE_API, {
+      headers: {
+        Authorization: localStorage.getItem("access_token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setUserName(res.userName);
+        setUserEmail(res.userEmail);
+        setProductLiikeData(res.productLike);
+        setProductBuyData(res.productBuy);
+        setProductCreateData(res.productCreate);
+      });
+  };
+
   return (
     <MyPageContainer>
       <Navigation />
       <MyPageWrapper>
-        <UserInfo>
-          <Wrapper>
-            <User large />
-            <Wrap>
-              <UserName>이사랑</UserName>
-              <UserEmail>rosarang@gmail.com</UserEmail>
-            </Wrap>
-          </Wrapper>
-        </UserInfo>
+        <UserInfo userName={userName} userEmail={userEmail} />
         <ContentWrapper>
           <Aside />
-          <ProductList>
-            <Product></Product>
-            <Product></Product>
-            <Product></Product>
-            <Product></Product>
-            <Product></Product>
-            <Product></Product>
-            <Product></Product>
-          </ProductList>
+          <ProductListContainer>
+            <Title />
+            <ProductList>
+              <Product></Product>
+              <Product></Product>
+              <Product></Product>
+            </ProductList>
+          </ProductListContainer>
         </ContentWrapper>
       </MyPageWrapper>
     </MyPageContainer>
   );
 }
 
-const Wrap = styled.div`
-  margin-left: 10px;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const UserName = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-`;
-
-const UserEmail = styled.p`
-  margin-top: 5px;
-  margin-left: 2px;
-  font-size: 12px;
-  color: ${(props) => props.theme.gray};
-`;
+const ProductListContainer = styled.div``;
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -66,13 +66,6 @@ const MyPageContainer = styled.div``;
 const MyPageWrapper = styled.div`
   width: 1176px;
   margin: auto;
-`;
-
-const UserInfo = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 200px;
 `;
 
 const ProductList = styled.div`

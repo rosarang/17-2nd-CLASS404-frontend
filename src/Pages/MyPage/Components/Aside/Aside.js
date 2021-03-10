@@ -4,7 +4,7 @@ import styled from "styled-components";
 import MenuTitle from "../MenuTitle/MenuTitle";
 import MenuLink from "../MenuLink/MenuLink";
 
-function Aside() {
+function Aside({ likeOn }) {
   const history = useHistory();
 
   const menuLink = (link) => history.push(link);
@@ -17,15 +17,19 @@ function Aside() {
   return (
     <AsideContainer>
       <MenuTitle name="수강생" />
-      <MenuLink onClick={() => menuLink("/mypage/wish")} name="찜한 클래스" />
       <MenuLink
-        onClick={() => menuLink("/mypage/myclass")}
+        on={likeOn}
+        onClick={() => menuLink("/mypage/like")}
+        name="찜한 클래스"
+      />
+      <MenuLink
+        onClick={() => menuLink("/mypage/buy")}
         name="수강 등록한 클래스"
       />
       <Blank />
       <MenuTitle name="크리에이터" />
       <MenuLink
-        onClick={() => menuLink("/mypage/creatorclass")}
+        onClick={() => menuLink("/mypage/create")}
         name="내가 만든 클래스"
       />
       <Blank />
