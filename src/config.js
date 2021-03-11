@@ -1,4 +1,4 @@
-const IP = "http://10.58.2.41:8000";
+const IP = "http://10.58.1.206:8001";
 
 // api
 
@@ -16,3 +16,6 @@ export const MYPAGE_DATA = "/data/mypageData.json";
 export const KAKAO_API = "http://10.58.2.41:8000/user/kakaologin";
 export const Login_API = "http://10.58.6.47:8000/user/login";
 export const SIGNUP_API = "http://10.58.6.47:8000/user/signup";
+
+export const PRODUCT_DETAIL_API =
+  "http://10.58.6.134:8005/product/1/productdetail";

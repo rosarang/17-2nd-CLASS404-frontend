@@ -6,6 +6,7 @@ import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import CreatorApply from "./Pages/CreatorApply/CreatorApply";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import ReviewUpload from "./Pages/ReveiwUpload/ReviewUpload";
 import MyPage from "./Pages/MyPage/MyPage";
 
 class Routes extends Component {
@@ -20,6 +21,9 @@ class Routes extends Component {
           <Route exact path="/apply" component={CreatorApply} />
           <Route exact path="/product" component={ProductDetail} />
           <Route exact path="/mypage" component={MyPage} />
+          {/* <Route exact path="/product" component={ProductDetail} /> */}
+          {/* <Route exact path="/product:id" component={ProductDetail} /> */}
+          <Route exact path="/reviewupload" component={ReviewUpload} />
         </Switch>
       </Router>
     );
