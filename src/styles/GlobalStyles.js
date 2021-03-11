@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 const GlobalStyle = createGlobalStyle`
   ${reset}
   *, html, body{
@@ -9,16 +9,14 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
     }
   }
-
-  a,
+  a,git 
   button {
     cursor: pointer;
   }
   a {
     text-decoration: none;
   }
-
-button {
+  button {
     border: none;
   }
 `;
