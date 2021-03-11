@@ -48,13 +48,13 @@ function Navigation() {
         <Wrapper>
           {isLoggedIn ? (
             <>
-              <CreatorCenter onClick={() => history.push("/create")}>
+              <CreatorCenter onClick={() => history.push("/apply")}>
                 크리에이터 센터
               </CreatorCenter>
-              <MyClass onClick={() => history.push("/mypage/myclass")}>
+              <MyClass onClick={() => history.push("/mypage")}>
                 내 클래스
               </MyClass>
-              <Heart onClick={() => history.push("/mypage/like")}>
+              <Heart onClick={() => history.push("/mypage")}>
                 <FontAwesomeIcon icon={faHeart} />
               </Heart>
               <Account>
@@ -73,7 +73,7 @@ function Navigation() {
                     <UserInfo onClick={() => history.push("/mypage")}>
                       <User />
                       <BlockWrapper>
-                        <UserName>{userName}이사랑</UserName>
+                        <UserName>{userName}</UserName>
                         <MyPage>마이페이지</MyPage>
                         <ArrowRight>
                           <FontAwesomeIcon icon={faChevronRight} />

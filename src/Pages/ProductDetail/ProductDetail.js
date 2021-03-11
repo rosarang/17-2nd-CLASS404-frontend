@@ -1,15 +1,13 @@
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
-import { PRODUCT_DETAIL_API } from '../../config';
-import styled from 'styled-components';
-import ReviewSection from './ReviewSection';
-import MenuAside from './MenuAside';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
+import { PRODUCT_DETAIL_API } from "../../config";
+import styled from "styled-components";
+import ReviewSection from "./ReviewSection";
+import MenuAside from "./MenuAside";
 
 function ProductDetail() {
-  const [productData, setProductData] = useState('');
+  const [productData, setProductData] = useState("");
 
   useEffect(() => {
     fetch(PRODUCT_DETAIL_API)
@@ -298,4 +296,3 @@ const ProductDescription = styled.section`
     line-height: 30px;
   }
 `;
->>>>>>> 4be7b9a... Add: 상세페이지 레이아웃 구현 완료

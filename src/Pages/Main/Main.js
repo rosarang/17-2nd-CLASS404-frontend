@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+
+import Navigation from "../../Components/Navigation/Navigation";
 import ProductsList from "../../Components/ProductList/ProductList";
 import Filter from "../../Components/Filter/Filter";
 import CategoryModal from "../../Components/CategoryModal/CategoryModal";
 import SortingModal from "../../Components/SortingModal/SortingModal";
-import Navigation from "../../Components/Navigation/Navigation";
+
 import { PRODUCTLIST_DATA, PRODUCTLIST_API } from "../../config";
 
 function Main() {
@@ -40,6 +42,7 @@ function Main() {
 
   const handleSortingModal = () => {
     setIsSortingModalOn(!isSortingModalOn);
+    setCheckedSorting("");
   };
 
   const clearCategory = () => {
@@ -51,12 +54,12 @@ function Main() {
   const saveSorting = () => {
     handleSortingModal();
 
-    const sortingQuery = "?sort=" + checkedSorting;
-    const sortingQuery2 = "&sort=" + checkedSorting;
+    const sortingQueryFirst = "?sort=" + checkedSorting;
+    const sortingQueryExtra = "&sort=" + checkedSorting;
 
     const queryString = window.location.search.includes("=")
-      ? sortingQuery2
-      : sortingQuery;
+      ? sortingQueryExtra
+      : sortingQueryFirst;
 
     history.push(history.location.search + queryString);
 
@@ -103,9 +106,9 @@ function Main() {
       {isCategoryModalOn && (
         <CategoryModal
           handleCategoryModal={handleCategoryModal}
-          saveCategory={saveCategory}
           checkedCategory={checkedCategory}
           setCheckedCategory={setCheckedCategory}
+          saveCategory={saveCategory}
           clearCategory={clearCategory}
         />
       )}
@@ -127,7 +130,7 @@ function Main() {
             onChange={handleSearch}
           />
           <SearchBtn
-            src="https://www.flaticon.com/svg/vstatic/svg/149/149852.svg?token=exp=1614775896~hmac=1c913769a5e3889fcf6b437946de1b78"
+            src="https://www.flaticon.com/svg/vstatic/svg/149/149852.svg?token=exp=1615396961~hmac=ebcc0ed91e3343d3b07b3de748a4dc08"
             alt="search"
           />
         </Search>
