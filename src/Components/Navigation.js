@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-<<<<<<< HEAD
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-=======
-import { faHeart, faMoneyBillAlt } from "@fortawesome/free-regular-svg-nicons";
->>>>>>> 1589667... Fix: footer 수정중
 import {
   faChevronDown,
   faChevronUp,
