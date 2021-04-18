@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Product from "../Product/Product";
+import Product from "./Product";
 
 function ProductList({ products }) {
   return (

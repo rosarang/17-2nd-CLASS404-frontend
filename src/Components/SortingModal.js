@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import RadioBtn from "../RadioBtn/RadioBtn";
+import RadioBtn from "./RadioBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { SORTINGLIST_DATA } from "../../config";
+import { SORTINGLIST_DATA } from "../config";
 
 function SortingModal({
   handleSortingModal,

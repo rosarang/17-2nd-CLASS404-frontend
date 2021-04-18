@@ -9,7 +9,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import User from "../User/User";
+import User from "./User";
 
 function Navigation() {
   const history = useHistory();

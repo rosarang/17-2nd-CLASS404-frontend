@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Product from "../../../../Components/Product/Product";
+import Product from "../../../../Components/Product";
 import Title from "../Title/Title";
 import Blank from "../Blank/Blank";
 import { useHistory } from "react-router";

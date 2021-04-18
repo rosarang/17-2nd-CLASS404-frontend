@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
-import Navigation from "../../Components/Navigation/Navigation";
+import Navigation from "../../Components/Navigation";
 import UserInfo from "./Components/UserInfo/UserInfo";
 import Aside from "./Components/Aside/Aside";
 import MyPageMain from "./Components/MyPageMain/MyPageMain";
