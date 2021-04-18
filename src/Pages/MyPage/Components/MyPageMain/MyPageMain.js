@@ -9,7 +9,7 @@ function MyPageMain({ productLike, productBuy, productCreate, queryString }) {
   const history = useHistory();
   useEffect(() => {
     history.push(queryString);
-  }, []);
+  }, [history, queryString]);
 
   return (
     <MyPageMainContainer>
