@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Navigation from "../../Components/Navigation";
-import UserInfo from "./Components/UserInfo/UserInfo";
-import Aside from "./Components/Aside/Aside";
-import MyPageMain from "./Components/MyPageMain/MyPageMain";
-import MyPageLike from "./Components/MyPageLike/MyPageLike";
-import MyPageBuy from "./Components/MyPageBuy/MyPageBuy";
-import MyPageCreate from "./Components/MyPageCreate/MyPageCreate";
+import UserInfo from "./Components/UserInfo";
+import Aside from "./Components/Aside";
+import MyPageMain from "./Components/MyPageMain";
+import MyPageLike from "./Components/MyPageLike";
+import MyPageBuy from "./Components/MyPageBuy";
+import MyPageCreate from "./Components/MyPageCreate";
 import { MYPAGE_API } from "../../config";
 
 function MyPage() {

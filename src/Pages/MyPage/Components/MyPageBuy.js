@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import { useHistory } from "react-router";
-import MyPageList from "../MyPageList/MyPageList";
-import { MYPAGE_API } from "../../../../config";
+import MyPageList from "./MyPageList";
+import { MYPAGE_API } from "../../../config";
 
 function MyPageBuy({ queryString }) {
   const history = useHistory();

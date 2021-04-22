@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { MYPAGE_API } from "../../../../config";
-import User from "../../../../Components/User";
+import { MYPAGE_API } from "../../../config";
+import User from "../../../Components/User";
 
 function UserInfo({
   userName,
