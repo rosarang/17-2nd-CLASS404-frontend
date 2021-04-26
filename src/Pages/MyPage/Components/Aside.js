@@ -1,8 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import MenuTitle from "../MenuTitle/MenuTitle";
-import MenuLink from "../MenuLink/MenuLink";
+import MenuTitle from "./MenuTitle";
+import MenuLink from "./MenuLink";
 
 function Aside({ handleMenu, currentId }) {
   const history = useHistory();

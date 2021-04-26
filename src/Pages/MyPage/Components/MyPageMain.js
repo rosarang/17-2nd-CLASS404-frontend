@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Product from "../../../../Components/Product/Product";
-import Title from "../Title/Title";
-import Blank from "../Blank/Blank";
+import Product from "../../../Components/Product";
+import Title from "./Title";
+import Blank from "./Blank";
 import { useHistory } from "react-router";
 
 function MyPageMain({ productLike, productBuy, productCreate, queryString }) {
   const history = useHistory();
   useEffect(() => {
     history.push(queryString);
-  }, []);
+  }, [history, queryString]);
 
   return (
     <MyPageMainContainer>

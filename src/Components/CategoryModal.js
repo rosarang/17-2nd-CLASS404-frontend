@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Button from "./Button/Button";
-import Checkbox from "../Checkbox/Checkbox";
+import Button from "./Button";
+import Checkbox from "./Checkbox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { CATEGORYLIST_DATA } from "../../config";
+import { CATEGORYLIST_DATA } from "../config";
 
 function CategoryModal({
   handleCategoryModal,

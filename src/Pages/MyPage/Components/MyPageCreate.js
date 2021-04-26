@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
-import { useHistory } from "react-router-dom";
-import MyPageList from "../MyPageList/MyPageList";
-import { MYPAGE_API } from "../../../../config";
+import { useHistory } from "react-router";
+import MyPageList from "./MyPageList";
+import { MYPAGE_API } from "../../../config";
 
-function MyPageLike({ queryString }) {
+function MyPageCreate({ queryString }) {
   const history = useHistory();
   const [productsData, setProductsData] = useState([]);
 
@@ -25,7 +25,7 @@ function MyPageLike({ queryString }) {
       });
   };
 
-  return <MyPageList products={productsData} title="찜한 클래스" />;
+  return <MyPageList products={productsData} title="내가 만든 클래스" />;
 }
 
-export default withRouter(MyPageLike);
+export default withRouter(MyPageCreate);

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-import Navigation from "../../Components/Navigation/Navigation";
-import ProductsList from "../../Components/ProductList/ProductList";
-import Filter from "../../Components/Filter/Filter";
-import CategoryModal from "../../Components/CategoryModal/CategoryModal";
-import SortingModal from "../../Components/SortingModal/SortingModal";
+import Navigation from "../../Components/Navigation";
+import ProductsList from "../../Components/ProductList";
+import Filter from "../../Components/Filter";
+import CategoryModal from "../../Components/CategoryModal";
+import SortingModal from "../../Components/SortingModal";
 
 import { PRODUCTLIST_DATA, PRODUCTLIST_API } from "../../config";
 import Footer from "../Components/Footer/Footer";
